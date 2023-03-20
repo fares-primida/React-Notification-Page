@@ -1,0 +1,36 @@
+@mixin Container
+($Width , 
+$Height , 
+$Display , 
+$Align-Items , 
+$Justify-Content , 
+$Flex-Wrap , 
+$Padding) 
+{
+    width: $Width;
+    height: $Height;
+    display: $Display;
+    align-items: $Align-Items;
+    justify-content: $Justify-Content;
+    flex-wrap: $Flex-Wrap;
+    padding: $Padding;
+}
+
+@mixin Position-And-Size($Position , $Width , $Height) {
+    position: $Position;
+    width: $Width;
+    height: $Height;
+}
+
+
+@mixin Center($Display , $Align-Items , $Justify-Content) {
+    display: $Display;
+    align-items: $Align-Items;
+    justify-content: $Justify-Content;
+}
+
+@mixin Grid($Display , $Columns , $Rows) {
+    display: $Display;
+    grid-template-columns: $Columns;
+    grid-template-rows: $Rows;
+}

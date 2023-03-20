@@ -1,0 +1,28 @@
+@import './Mixens';
+
+
+// Primary
+
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+// Neutral
+
+$White: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+
+.project {
+    @include Position-And-Size(default , 100% , 100vh);
+    @include Center(flex , center , center);
+    background-color: $White;
+    .container {
+        @include Position-And-Size(default , 45% , 95%);
+        box-shadow:2px 7px 7px 10px rgb(236, 236, 236);
+    }
+}
