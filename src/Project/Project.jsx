@@ -44,11 +44,12 @@ const content = []
 
 const Notifications = document.querySelectorAll('.notification')
 
-Notifications.forEach((item) => {
-    item.addEventListener('click' , function(e) {
-        console.log('submited')
+
+const Res = () => {
+    Notifications.forEach((item) => {
+        item.classList.remove('unread')
     })
-})
+}
 
 const Project = () => {
     return (
@@ -61,18 +62,9 @@ const Project = () => {
                 <h3>{data.length}</h3>
             </div>{" "}
             </h2>
-            <h5>Mark All Is Read</h5>
+            <h5 className='reset' onClick={Res}>Mark All Is Read</h5>
         </div>
         <ReturnElements />
-        {/* <div className="notification unread">
-            <div className="image"></div>
-            <div className="category">
-            <p>Fares Yasser</p>
-            <p>1M Ago</p>
-            </div>
-            <p>Reacted to your recent post</p>
-            <h3>Chass Club</h3>
-        </div> */}
         </div>
     </div>
     );
