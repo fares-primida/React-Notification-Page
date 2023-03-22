@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,800;1,500;1,800&display=swap');
 @import './Mixens';
 
+
+$Jakarta: 'Plus Jakarta Sans', sans-serif;
 
 // Primary
 
@@ -18,11 +21,91 @@ $Very-dark-blue: hsl(224, 21%, 14%);
 
 
 .project {
-    @include Position-And-Size(default , 100% , 100vh);
-    @include Center(flex , center , center);
+    @include Position-And-Size(default, 100%, 100vh);
+    @include Center(flex, center, center);
     background-color: $White;
+    font-family: $Jakarta;
+
     .container {
-        @include Position-And-Size(default , 45% , 95%);
-        box-shadow:2px 7px 7px 10px rgb(236, 236, 236);
+        @include Position-And-Size(default, 45%, 95%);
+        @include Center(flex, center, space-between);
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 2px 7px 7px 10px rgb(236, 236, 236);
+        border-radius: 10px;
+
+        .header {
+            @include Position-And-Size(default, 100%, 50px);
+            @include Center(flex, center, space-between);
+
+            h2 {
+                color: #000;
+                font-weight: 800;
+                display: flex;
+
+                .span {
+                    @include Center(flex, center, center);
+                    @include Position-And-Size(relative, 35px, 35px);
+                    background-color: $Blue;
+                    border-radius: 7px;
+                    margin: 0px 7px;
+                    font-size: 15px;
+                    color: $White;
+                }
+            }
+
+            h5 {
+                color: $Grayish-blue;
+            }
+
+            margin-bottom: 15px;
+        }
+
+        .notification {
+            @include Position-And-Size(default, 100%, 40px);
+            @include Center(flex, center, start);
+            padding: 10px;
+            margin: 10px 0px;
+
+            .image {
+                @include Position-And-Size(default, 40px, 40px);
+                border-radius: 50%;
+                background-color: rgb(137, 219, 137);
+                margin-right: 10px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .category {
+                @include Position-And-Size(flex, center, center);
+                flex-direction: column;
+                margin-right: 10px;
+
+                p {
+                    font-weight: 800;
+                    font-size: 15px;
+
+                    &:nth-child(2) {
+                        color: gray;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            p {
+                font-weight: 800;
+                margin-right: 4px;
+            }
+
+            h4 {
+                color: $Blue;
+                font-weight: 800;
+            }
+        }
+
+        .unread {
+            background-color: rgb(242, 255, 252);
+        }
     }
 }
